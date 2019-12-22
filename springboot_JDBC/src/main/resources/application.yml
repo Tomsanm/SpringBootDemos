@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    username: root
+    password: 140429
+    url: jdbc:mysql://localhost:3306/springboot_jdbc?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据源切换成 Druid
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxIdle: 10
+    maxActive: 21
+    maxWait: 60000
+    time-between-eviction-runs-millis: 60001  # 隔多久去检查连接是否应该清除
+    min-evictable-idle-time-millis: 3000001 # 连接在池中最小的生存时间
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #    配置数据监控统计拦截
+    filters: stat,wall,slf4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergesql=true;druid.stat.slowSqlMillis=500
+
