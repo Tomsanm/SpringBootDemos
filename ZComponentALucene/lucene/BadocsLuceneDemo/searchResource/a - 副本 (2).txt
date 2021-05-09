@@ -1,0 +1,3 @@
+代码中的 BooleanClause.Occur 参数就是控制逻辑的关键，Occur 有「出现」之意。
+除了 MUST 和 MUST_NOT 两个选项之外，它还有 SHOULD 和 FILTER 两个值，
+那这两个值有什么特别的含义呢？上面的两个复合查询案例都是逻辑与，那么有了 SHOULD 我们就可以实现逻辑或的功能。
